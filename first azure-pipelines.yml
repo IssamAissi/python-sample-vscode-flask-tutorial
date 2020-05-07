@@ -31,7 +31,7 @@ stages:
     pool:
       vmImage: 'CentOS-latest'
     steps:
-    - script: echo Hello, world! B1
+    - bash: echo Hello, world! B1
       displayName: 'Run script B1 CentOS'
 
   - job: B2
