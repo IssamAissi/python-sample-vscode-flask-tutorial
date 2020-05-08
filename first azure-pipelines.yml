@@ -37,7 +37,7 @@ stages:
   - job: B2
     dependsOn: B1
     pool:
-      vmImage: 'macOS-10.14'
+      vmImage: 'macOS-Stable'
     steps:
     - bash: echo "B2"
       displayName: 'Run script B2 macOS'
