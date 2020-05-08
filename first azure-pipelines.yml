@@ -12,10 +12,10 @@ stages:
   - job: B1
     cancelTimeoutInMinutes: 2 # how much time to give 'run always even if cancelled tasks' before stopping them
     pool:
-      vmImage: 'CentOS-7.5'
+      vmImage: 'ubuntu-latest'
     steps:
     - bash: echo Hello, world! B1
-      displayName: 'Run script B1 CentOS'
+      displayName: 'Run script B1 ubuntu-latest'
 
   - job: B2
     dependsOn: B1
