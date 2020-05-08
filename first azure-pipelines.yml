@@ -7,23 +7,6 @@ trigger:
 - master
 
 stages:
-- stage: A
-  jobs:
-  - job: A1
-    timeoutInMinutes: 10 # how long to run the job before automatically cancelling  
-    pool:
-      vmImage: 'windows-latest'
-    steps:
-    - script: echo Hello, world! A1
-      displayName: 'Run script A1 windows'
-
-  - job: A2
-    pool:
-      vmImage: 'ubuntu-16.04'
-    steps:
-    - bash: echo "A2"
-      displayName: 'Run script A2 ubuntu'
-
 - stage: B
   jobs:
   - job: B1
@@ -41,3 +24,22 @@ stages:
     steps:
     - bash: echo "B2"
       displayName: 'Run script B2 macOS'
+
+
+- stage: A
+  jobs:
+  - job: A1
+    timeoutInMinutes: 10 # how long to run the job before automatically cancelling  
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+    - script: echo Hello, world! A1
+      displayName: 'Run script A1 windows'
+
+  - job: A2
+    pool:
+      vmImage: 'ubuntu-16.04'
+    steps:
+    - bash: echo "A2"
+      displayName: 'Run script A2 ubuntu'
+
